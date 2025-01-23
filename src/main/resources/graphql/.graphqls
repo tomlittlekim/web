@@ -1,0 +1,20 @@
+# schema.graphqls
+type ResponseDto {
+    resultCode: String
+    responseDto: String
+}
+
+type Query {
+    _: Boolean # Dummy Query
+}
+
+type Mutation {
+    loginJwt(requestDto: RequestDto): ResponseDto
+}
+
+input RequestDto {
+    site: String!
+    id: String!
+    password: String!
+    name: String
+}

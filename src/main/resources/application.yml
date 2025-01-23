@@ -1,0 +1,16 @@
+# application.yml
+jwt:
+  # 시크릿 키는 최소 256bit 이상이어야 함.
+  secret-key: "ZXBpbi0yNTYtYml0LXNlY3JldC1rZXktZXBpbjEwODMhQA==ZXBpbi0yNTYtYml0LXNlY3JldC1rZXktZXBpbjEwODMhQA=="
+
+spring:
+  profiles:
+    active: dev
+  # 임시로 Docker Compose 비활성화
+  docker:
+    compose:
+      enabled: false
+
+logging:
+  level:
+    org.springframework.core.env: DEBUG

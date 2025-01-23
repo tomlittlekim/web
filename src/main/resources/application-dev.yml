@@ -1,0 +1,29 @@
+spring:
+  session:
+    jdbc:
+      initialize-schema: always
+    store-type: jdbc
+  datasource:
+    url: jdbc:postgresql://192.168.1.119:5432/emes
+    username: epinity
+    password: 8pin1083!@
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: none
+      format_sql: true
+    show-sql: true
+
+cors:
+  allowed-origins: "http://localhost:3000"
+  allowed-methods: "GET, POST, PUT, DELETE, PATCH, OPTIONS"
+  allowed-headers: "Origin, Content-Type, Accept, Authorization, X-CSRF-TOKEN"
+  allow-credentials: true
+  max-age: 3600
+
+logging:
+  level:
+    root: DEBUG
+    com.egovframework.emes: DEBUG
+    org.hibernate.SQL: DEBUG
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
